@@ -1,0 +1,25 @@
+
+{% extends 'base.html' %}
+    {% block body %}
+<table>
+    <form method="post" action="upload" enctype="multipart/form-data">
+        {% csrf_token %}
+        <tr>
+            <td><input type="text" name="name" placeholder="Movie name"></td>
+        </tr>
+        <tr>
+            <td><input type="text" name="desc" placeholder="Movie Description"></td>
+        </tr>
+        <tr>
+            <td><input type="number" name="year" placeholder="Movie Year"></td>
+        </tr>
+        <tr>
+            <td><input type="file" name="img" placeholder="Movie Image"></td>
+        </tr>
+        <tr>
+            <td><input type="submit" ></td>
+        </tr>
+    </form>
+</table>
+
+{% endblock %}
